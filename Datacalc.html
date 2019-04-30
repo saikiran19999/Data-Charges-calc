@@ -1,0 +1,57 @@
+<html>
+<head>
+<h2><b>Moblie Charges Details</b></h2>
+    <title>Data Charges</title>
+<script language="javascript" >
+function funny()
+{ 
+  var data=non.input.value;
+    
+    switch(true){
+        case (data<=1024):
+             non.output.value=data/10;
+            break;
+        case (data<=2048):
+            non.output.value=(data-1024)/10+90;
+            break;
+        case (data<=3072):
+             non.output.value=(data-2048)/7+150;
+            break;
+        case (data<=4096):
+            non.output.value=(data-3072)/5+250;
+            break;
+        case (data<=5120):
+            non.output.value=(data-4404)/10+300;
+            break;
+        case (data>5120):
+            alert("This is not available here. Thankyou");
+        
+    }
+}
+    
+</script>
+</head>
+    <body style="background-color:aliceblue;">
+<form id="non">
+    
+<table>
+    
+ <tr>
+   <td>Enter Data in MegaBits:</td>
+   <td><input type="text" id="input"/></td>
+ </tr>
+    
+ <tr>
+   <td> </td>
+   <td> <input type="button" id="btn" value="Your bill is" OnClick="funny()" /></td>
+ </tr>
+    
+ <tr> 
+   <td> Total bill amount in rupees : </td>
+   <td> <input type="text" id="output" value=" " readonly="true" /></td>
+ </tr>
+    
+</table>
+</form>
+</body>
+</html>
